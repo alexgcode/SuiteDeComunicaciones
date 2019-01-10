@@ -28,7 +28,7 @@ def get_time_to_resolve(id_ticket):
 def get_creation_date(id_ticket):
     print("nro de ticket solicitado: " + str(id_ticket))
     ticket = obtener_ticket(id_ticket)
-    print("fecha de creación: " + ticket['date'])
+    print("fecha de creaciÃ³n: " + ticket['date'])
     return ticket['date']
 
 def get_group_ticket(id_ticket):
@@ -38,7 +38,7 @@ def get_group_ticket(id_ticket):
     for item in groups:
         print(item[0])
         if int(item[0]) == int(id_ticket):
-            print("se seleccionó el ticket nro: " + str(item[0]))
+            print("se seleccionÃ³ el ticket nro: " + str(item[0]))
             group_ticket = get_group(item[1])
     
     return group_ticket
@@ -78,7 +78,7 @@ def echo(bot, update):
     chatText = update.message.text	#get message from user
     
     if chatText == 'menu':
-        bot.send_message(chat_id=chatID, text="Para consultar datos sobre un ticket haga lo siguiente \n1. Para consultar el estado de un ticket escriba: estado nro_del_ticket \n2. Para consultar la fecha de creacion de un ticket escriba: creacion nro_del_ticket \n3. Para consultar la fecha de finalización de un ticket escriba: termino nro_del_ticket \n4. Para consultar el área que esta atendiendo un ticket escriba: area nro_del_ticket")
+        bot.send_message(chat_id=chatID, text="Para consultar datos sobre un ticket haga lo siguiente \n1. Para consultar el estado de un ticket escriba: estado nro_del_ticket \n2. Para consultar la fecha de creacion de un ticket escriba: creacion nro_del_ticket \n3. Para consultar la fecha de finalizaciÃ³n de un ticket escriba: termino nro_del_ticket \n4. Para consultar el Ã¡rea que esta atendiendo un ticket escriba: area nro_del_ticket")
         
     if 'estado' in chatText:  #estado nro_del_ticket
         nro = re.findall(r'\d+', chatText)
@@ -113,7 +113,7 @@ def echo(bot, update):
         respuesta = obtener_nombre(chatText)
         bot.send_message(chat_id=chatID, text=respuesta)
     else:
-        bot.send_message(chat_id=chatID, text='porfavor ingrese un número')
+        bot.send_message(chat_id=chatID, text='porfavor ingrese un nÃºmero')
 
     #bot.send_message(chat_id=chatID, text='pruebas 3')
 

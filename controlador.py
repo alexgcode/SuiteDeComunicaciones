@@ -122,8 +122,8 @@ while True:
                 status = get_status(tickets2[n]['status'])
                 if(data[n-1][1] == 2): #valida si se envia por sms
                     print("telefono al que se envia el aviso de cambio de estado: " + str(data[n-1][2]))
-                    send_sms(data[n-1][2],str("El estado de atención de su ticket "+str(data[n-1][0])+" cambio a: " + status))
-                    print("se envió mensaje por sms de cambio de estado del ticket nro " + str(n+1) + ". Nuevo estado es: " + status)
+                    send_sms(data[n-1][2],str("El estado de atenciÃ³n de su ticket "+str(data[n-1][0])+" cambio a: " + status))
+                    print("se enviÃ³ mensaje por sms de cambio de estado del ticket nro " + str(n+1) + ". Nuevo estado es: " + status)
                 
                 
         
