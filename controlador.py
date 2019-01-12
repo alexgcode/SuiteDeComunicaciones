@@ -7,7 +7,7 @@ from get_glpi_data2 import obtener_updates
 from send_sms import send_sms
 
 
-#r0 = requests.get('http://192.168.111.145:5000/updates')
+#r0 = requests.get('http://x.x.x.x:5000/updates')
 #data0 = r0.json()
 data0 = obtener_updates()
 last_ticket = data0[-1]
