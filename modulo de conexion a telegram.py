@@ -6,7 +6,7 @@ from get_glpi_data2 import obtener_grupos
 import json
 import re
 
-updater = Updater(token='617303067:AAEE0PQ_osDsKcRaLO096T5Yt2BEAMrINVk')
+updater = Updater(token='')
 
 dispatcher = updater.dispatcher
 
